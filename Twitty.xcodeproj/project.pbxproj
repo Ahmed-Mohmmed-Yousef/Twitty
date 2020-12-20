@@ -19,6 +19,9 @@
 		24E939F1258D550D00979FE4 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E939F0258D550D00979FE4 /* NotificationsController.swift */; };
 		24E939F4258D552B00979FE4 /* ConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E939F3258D552B00979FE4 /* ConversationController.swift */; };
 		24E939F7258D600C00979FE4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E939F6258D600C00979FE4 /* Extensions.swift */; };
+		24E939FB258DED2300979FE4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E939FA258DED2300979FE4 /* LoginController.swift */; };
+		24E939FE258DEDF800979FE4 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E939FD258DEDF800979FE4 /* RegistrationController.swift */; };
+		24E93A01258DFA1900979FE4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E93A00258DFA1900979FE4 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		24E939F0258D550D00979FE4 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		24E939F3258D552B00979FE4 /* ConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationController.swift; sourceTree = "<group>"; };
 		24E939F6258D600C00979FE4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		24E939FA258DED2300979FE4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		24E939FD258DEDF800979FE4 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		24E93A00258DFA1900979FE4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				24E939F6258D600C00979FE4 /* Extensions.swift */,
+				24E93A00258DFA1900979FE4 /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 		24E939E2258D4EEB00979FE4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				24E939F9258DED0600979FE4 /* Authantication */,
 				24E939E6258D4F9D00979FE4 /* MainTabController.swift */,
 				24E939EA258D545700979FE4 /* FeedController.swift */,
 				24E939ED258D54DD00979FE4 /* ExploreController.swift */,
@@ -131,6 +139,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		24E939F9258DED0600979FE4 /* Authantication */ = {
+			isa = PBXGroup;
+			children = (
+				24E939FA258DED2300979FE4 /* LoginController.swift */,
+				24E939FD258DEDF800979FE4 /* RegistrationController.swift */,
+			);
+			path = Authantication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,9 +226,12 @@
 				24E939EB258D545700979FE4 /* FeedController.swift in Sources */,
 				24E939E7258D4F9D00979FE4 /* MainTabController.swift in Sources */,
 				24E939F1258D550D00979FE4 /* NotificationsController.swift in Sources */,
+				24E93A01258DFA1900979FE4 /* Utilities.swift in Sources */,
+				24E939FE258DEDF800979FE4 /* RegistrationController.swift in Sources */,
 				24E939CE258D4BC000979FE4 /* SceneDelegate.swift in Sources */,
 				24E939F4258D552B00979FE4 /* ConversationController.swift in Sources */,
 				24E939EE258D54DD00979FE4 /* ExploreController.swift in Sources */,
+				24E939FB258DED2300979FE4 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
