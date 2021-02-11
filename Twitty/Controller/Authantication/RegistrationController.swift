@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class RegistrationController: UIViewController {
     
     //MARK: - Properties
     private let imagePicker = UIImagePickerController()
+    private var profileImage: UIImage?
     
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -51,13 +54,13 @@ class RegistrationController: UIViewController {
     }()
     
     private let fullNameTextField: UITextField = {
-        let tf = Utilities().textField(withPlaceholder: "Email")
+        let tf = Utilities().textField(withPlaceholder: "Full name")
         tf.keyboardType = .emailAddress
         return tf
     }()
     
     private let usernameTextField: UITextField = {
-        let tf = Utilities().textField(withPlaceholder: "Email")
+        let tf = Utilities().textField(withPlaceholder: "Username")
         tf.keyboardType = .emailAddress
         return tf
     }()
@@ -66,7 +69,7 @@ class RegistrationController: UIViewController {
         let tf = Utilities().textField(withPlaceholder: "Password")
         tf.autocorrectionType = .no
         tf.autocapitalizationType = .none
-        tf.isSecureTextEntry = true
+//        tf.isSecureTextEntry = true
         return tf
     }()
     
@@ -101,7 +104,31 @@ class RegistrationController: UIViewController {
     }
     
     @objc private func handelSignUp() {
-        print("TTT")
+        print("Gooo")
+        guard let profileImage = self.profileImage else {
+            print("Please upload profileImahe")
+            return
+        }
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let fullName = fullNameTextField.text else { return }
+        guard let username = usernameTextField.text else { return }
+        
+        let authCredentials = AuthCredentials(email: email, password: password, fullName: fullName, username: username, profileImage: profileImage)
+        AuthServices.shared.registerUser(authCredentials: authCredentials) {[weak self] (error, ref) in
+            print("Result")
+            if error != nil {
+                print("Error")
+                print(error!.localizedDescription)
+                return
+            }
+            print("Success")
+            guard let window = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return }
+            guard let tab = window.rootViewController as? MainTabController else { return }
+            tab.authenticationUserAndConfiguration()
+            self?.navigationController?.dismiss(animated: true, completion: nil)
+        }
+        
     }
     
     @objc private func handelDontHaveAccount() {
@@ -137,6 +164,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else { return }
+        self.profileImage = profileImage
         plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
         plusPhotoButton.layer.masksToBounds = true
         plusPhotoButton.layer.borderWidth = 2

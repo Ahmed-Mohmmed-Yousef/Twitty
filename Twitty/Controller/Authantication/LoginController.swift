@@ -68,16 +68,32 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        
     }
     
     //MARK: - Selectors
     @objc private func handelLogin() {
-        print("TTT")
+        print("Gooooo")
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        AuthServices.shared.logUserIn(with: email, password: password) {[unowned self] (result, error) in
+            
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            guard let window = UIApplication.shared.windows.first(where: {$0.isKeyWindow}) else { return }
+            guard let tab = window.rootViewController as? MainTabController else { return }
+            tab.authenticationUserAndConfiguration()
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc private func handelDontHaveAccount() {
         let registrationVC = RegistrationController()
         navigationController?.pushViewController(registrationVC, animated: true)
+//        fatalError()
     }
     
     //MARK: - Helpers
