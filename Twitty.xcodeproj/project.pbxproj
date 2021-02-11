@@ -26,6 +26,7 @@
 		24E939FB258DED2300979FE4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E939FA258DED2300979FE4 /* LoginController.swift */; };
 		24E939FE258DEDF800979FE4 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E939FD258DEDF800979FE4 /* RegistrationController.swift */; };
 		24E93A01258DFA1900979FE4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E93A00258DFA1900979FE4 /* Utilities.swift */; };
+		24F1E7EC25D5C6230068798F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F1E7EB25D5C6230068798F /* User.swift */; };
 		84361E73A6EB4DC2513928CC /* Pods_Twitty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4641BAE6E9B505706330419 /* Pods_Twitty.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		24E939FA258DED2300979FE4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		24E939FD258DEDF800979FE4 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		24E93A00258DFA1900979FE4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		24F1E7EB25D5C6230068798F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		346E25FA2D59C19DB55BC72C /* Pods-Twitty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitty.debug.xcconfig"; path = "Target Support Files/Pods-Twitty/Pods-Twitty.debug.xcconfig"; sourceTree = "<group>"; };
 		B4641BAE6E9B505706330419 /* Pods_Twitty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 		24E939E5258D4EF600979FE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24F1E7EB25D5C6230068798F /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				24E939F7258D600C00979FE4 /* Extensions.swift in Sources */,
 				24E939CC258D4BC000979FE4 /* AppDelegate.swift in Sources */,
 				24E939EB258D545700979FE4 /* FeedController.swift in Sources */,
+				24F1E7EC25D5C6230068798F /* User.swift in Sources */,
 				24E939E7258D4F9D00979FE4 /* MainTabController.swift in Sources */,
 				24E939F1258D550D00979FE4 /* NotificationsController.swift in Sources */,
 				244A24D52598725900C1E0CE /* AuthServices.swift in Sources */,
