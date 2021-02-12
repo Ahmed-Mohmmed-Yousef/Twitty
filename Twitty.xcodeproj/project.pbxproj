@@ -27,6 +27,9 @@
 		24E939FE258DEDF800979FE4 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E939FD258DEDF800979FE4 /* RegistrationController.swift */; };
 		24E93A01258DFA1900979FE4 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E93A00258DFA1900979FE4 /* Utilities.swift */; };
 		24F1E7EC25D5C6230068798F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F1E7EB25D5C6230068798F /* User.swift */; };
+		24F1E81425D6B4450068798F /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F1E81325D6B4450068798F /* UploadTweetController.swift */; };
+		24F1E81725D6C9A00068798F /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F1E81625D6C9A00068798F /* CaptionTextView.swift */; };
+		24F1E81A25D6D48E0068798F /* TweetServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F1E81925D6D48E0068798F /* TweetServices.swift */; };
 		84361E73A6EB4DC2513928CC /* Pods_Twitty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4641BAE6E9B505706330419 /* Pods_Twitty.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		24E939FD258DEDF800979FE4 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		24E93A00258DFA1900979FE4 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		24F1E7EB25D5C6230068798F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		24F1E81325D6B4450068798F /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
+		24F1E81625D6C9A00068798F /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
+		24F1E81925D6D48E0068798F /* TweetServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetServices.swift; sourceTree = "<group>"; };
 		346E25FA2D59C19DB55BC72C /* Pods-Twitty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitty.debug.xcconfig"; path = "Target Support Files/Pods-Twitty/Pods-Twitty.debug.xcconfig"; sourceTree = "<group>"; };
 		B4641BAE6E9B505706330419 /* Pods_Twitty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,6 +130,7 @@
 			children = (
 				244A24D42598725900C1E0CE /* AuthServices.swift */,
 				24B396292599E1FE000E576B /* UserServices.swift */,
+				24F1E81925D6D48E0068798F /* TweetServices.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 				24E939ED258D54DD00979FE4 /* ExploreController.swift */,
 				24E939F0258D550D00979FE4 /* NotificationsController.swift */,
 				24E939F3258D552B00979FE4 /* ConversationController.swift */,
+				24F1E81325D6B4450068798F /* UploadTweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 		24E939E4258D4EF300979FE4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				24F1E81625D6C9A00068798F /* CaptionTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -328,7 +337,10 @@
 				24E939F7258D600C00979FE4 /* Extensions.swift in Sources */,
 				24E939CC258D4BC000979FE4 /* AppDelegate.swift in Sources */,
 				24E939EB258D545700979FE4 /* FeedController.swift in Sources */,
+				24F1E81425D6B4450068798F /* UploadTweetController.swift in Sources */,
 				24F1E7EC25D5C6230068798F /* User.swift in Sources */,
+				24F1E81725D6C9A00068798F /* CaptionTextView.swift in Sources */,
+				24F1E81A25D6D48E0068798F /* TweetServices.swift in Sources */,
 				24E939E7258D4F9D00979FE4 /* MainTabController.swift in Sources */,
 				24E939F1258D550D00979FE4 /* NotificationsController.swift in Sources */,
 				244A24D52598725900C1E0CE /* AuthServices.swift in Sources */,
