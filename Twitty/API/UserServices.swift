@@ -13,8 +13,8 @@ class UserServices {
     
     private init() {}
     
-    func fetchUser(completion: @escaping(User) -> Void) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
+    func fetchUser(uid: String, completion: @escaping(User) -> Void) {
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
         REF_USER.child(uid).observeSingleEvent(of: .value) { (snapshot) in
             guard let dictionary = snapshot.value as? [String : Any] else { return }
             let user = User(uid: snapshot.key, dictionary: dictionary)

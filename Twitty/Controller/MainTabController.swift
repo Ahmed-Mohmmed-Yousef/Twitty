@@ -41,7 +41,8 @@ class MainTabController: UITabBarController {
     //MARK: - API
     
     func fetchUser() {
-        UserServices.shared.fetchUser {[weak self] user in
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        UserServices.shared.fetchUser(uid: uid) {[weak self] user in
             self?.user = user
         }
     }
@@ -83,7 +84,7 @@ class MainTabController: UITabBarController {
         actionButton.layer.cornerRadius = 56 / 2
     }
     func configurationViewContoller() {
-        let feed = FeedController()
+        let feed = FeedController(collectionViewLayout: UICollectionViewFlowLayout( ))
         let navFeed = templateNavigationContraler(image: #imageLiteral(resourceName: "home_unselected"), rootViewController: feed)
         let explor = ExploreController()
         let navExplor = templateNavigationContraler(image: #imageLiteral(resourceName: "search_unselected"), rootViewController: explor)
@@ -102,3 +103,4 @@ class MainTabController: UITabBarController {
     }
 
 }
+
